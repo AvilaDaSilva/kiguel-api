@@ -25,6 +25,10 @@ public class TeamController {
         return teamRepository.findById(id).orElse(null);
     }
 
+    public List<TeamEntity> findByName(String name) {
+        return teamRepository.findByName(name);
+    }
+
     public List<TeamEntity> findAll() {
         return teamRepository.findAll();
     }

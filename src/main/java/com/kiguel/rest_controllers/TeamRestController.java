@@ -25,20 +25,25 @@ public class TeamRestController {
         return teamController.findById(id);
     }
 
+    @GetMapping("/name/{name}")
+    public List<TeamEntity> getByName(@PathVariable String name) {
+        return teamController.findByName(name);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public TeamEntity save(@RequestBody TeamEntity teamEntity) {
         return teamController.save(teamEntity);
     }
 
-    @PutMapping("/{idTeam}")
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public TeamEntity update(@PathVariable Long id, @RequestBody TeamEntity team) {
         team.setId(id);
         return teamController.save(team);
     }
 
-    @DeleteMapping("/{idTeam}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteTeam(@PathVariable Long id) {
         teamController.deleteById(id);
