@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name="teams")
 public class TeamEntity {
 
 	@Id
@@ -19,8 +20,8 @@ public class TeamEntity {
 	private String crestPath;
 	
 	@ManyToOne
-	@JoinColumn(name = "city_id", nullable = false)
-	private CityEntity cityEntity;
+	@JoinColumn(name = "city", nullable = false)
+	private CityEntity city;
 	
 	@Column(nullable = true)
 	private String address;
