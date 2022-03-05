@@ -21,17 +21,17 @@ Claro sem a parte burocratica, pois isso não é sabido ao certo como funciona.
 # O que falta a gente fazer? 
 ### Que já está parcialmente pronto...
 
-- Alterar o método delete, pra somente inativar, clube, jogador;
-- Delete do teamplayer deve adicionar uma data final (endDate) ao vinculo de time-jogador -> significa que o jogador pode ir para outro time;
+- [ ] Alterar o método delete, pra somente inativar, clube, jogador;
+- [ ] Delete do teamplayer deve adicionar uma data final (endDate) ao vinculo de time-jogador -> significa que o jogador pode ir para outro time;
 	
 # O que falta fazer ainda?
-- as entidades e crud do campeonato
-- bem como os vinculos de times e jogadores ao campeonato
-- criar as entidades de fase de grupos e mata-mata
-- colocar as lógicas para criação do campeonato
-- ter a lógica para montar os confrontos com base nos horários e datas inicias e finais do campeonato
-- fazer funcionar todo o campeonato com base nos pontos feitos em cada bola por cada jogador em cada confronto
-- ter os relatórios individuais e por time
+- [ ] As entidades e crud do campeonato
+- [ ] Bem como os vinculos de times e jogadores ao campeonato
+- [ ] Criar as entidades de fase de grupos e mata-mata
+- [ ] Colocar as lógicas para criação do campeonato
+- [ ] Ter a lógica para montar os confrontos com base nos horários e datas inicias e finais do campeonato
+- [ ] Fazer funcionar todo o campeonato com base nos pontos feitos em cada bola por cada jogador em cada confronto
+- [ ] Ter os relatórios individuais e por time
 
 # Parâmetros do campeonato
 - Número de bolas (formato campeonato)
