@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="team_players")
+@Table(name="team_player")
 public class TeamPlayerEntity {
 
 	@Id
