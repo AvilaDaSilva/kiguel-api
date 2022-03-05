@@ -1,6 +1,5 @@
 package com.kiguel.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="cities")
+@Table(name="city")
 public class CityEntity {
 
     @Id

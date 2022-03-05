@@ -19,7 +19,7 @@ public class TeamPlayersController {
         return teamPlayerRepository.save(teamPlayerEntity);
     }
     
-	public List<TeamPlayerEntity> findPlayersByTeam(TeamEntity team) {
-		return teamPlayerRepository.findByTeam(team);
+	public List<TeamPlayerEntity> findActivePlayersByTeam(TeamEntity team) {
+		return teamPlayerRepository.findActivePlayersByTeam(team);
 	}
 }
