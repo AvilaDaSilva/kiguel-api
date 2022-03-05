@@ -20,7 +20,7 @@ public class TeamEntity {
 	private String crestPath;
 	
 	@ManyToOne
-	@JoinColumn(name = "city", nullable = false)
+	@JoinColumn(name = "city_id", nullable = false)
 	private CityEntity city;
 	
 	@Column(nullable = true)

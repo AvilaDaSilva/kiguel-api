@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.kiguel.enums.StatesEnum;
+
 import lombok.Data;
 
 @Data
@@ -31,5 +33,5 @@ public class PlayerEntity {
 	private String photoPath;
 	
 	@Column(nullable = false)
-	private StatesEntity state;
+	private StatesEnum state;
 }

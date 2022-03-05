@@ -23,11 +23,11 @@ public class TeamPlayerEntity {
 	private Long id;
 	
 	@OneToOne
-	@JoinColumn(name = "team", nullable = false)
+	@JoinColumn(name = "team_id", nullable = false)
 	private TeamEntity team;
 	
 	@OneToOne
-	@JoinColumn(name = "player", nullable = false)
+	@JoinColumn(name = "player_id", nullable = false)
 	private PlayerEntity player;
 	
 	@Column(nullable = true)
@@ -37,8 +37,8 @@ public class TeamPlayerEntity {
 	private Date endDate;
 	
 	@Column(columnDefinition = "boolean default false")
-	private Boolean isCaptain;
+	private Boolean captain;
 
 	@Column(columnDefinition = "boolean default false")
-	private Boolean isCoach;
+	private Boolean coach;
 }
