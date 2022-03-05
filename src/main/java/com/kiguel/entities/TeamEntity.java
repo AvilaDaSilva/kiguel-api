@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 @Entity
+@Table(name="teams")
 public class TeamEntity {
 
 	@Id
@@ -20,7 +21,7 @@ public class TeamEntity {
 	
 	@ManyToOne
 	@JoinColumn(name = "city_id", nullable = false)
-	private CityEntity cityEntity;
+	private CityEntity city;
 	
 	@Column(nullable = true)
 	private String address;
