@@ -1,6 +1,6 @@
 package com.kiguel.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,10 +31,10 @@ public class TeamPlayerEntity {
 	private PlayerEntity player;
 	
 	@Column(nullable = true)
-	private Date startDate;
+	private LocalDate startDate;
 	
 	@Column(nullable = true)
-	private Date endDate;
+	private LocalDate endDate;
 	
 	@Column(columnDefinition = "boolean default false")
 	private Boolean captain;
