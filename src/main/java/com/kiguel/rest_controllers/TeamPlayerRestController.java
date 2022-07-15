@@ -16,7 +16,7 @@ import com.kiguel.entities.TeamPlayerEntity;
 import com.kiguel.service.TeamPlayerService;
 
 @RestController
-@RequestMapping("/team-player")
+@RequestMapping("/api/team-player")
 public class TeamPlayerRestController {
 	
 	@Autowired

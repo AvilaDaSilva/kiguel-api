@@ -39,16 +39,17 @@ Claro sem a parte burocratica, pois isso não é sabido ao certo como funciona.
 - Número de jogadores
 	- Quantidade de jogadores por time;
 - Critério de desempate (aqui pode ser uma seleção multipla)
+	- confronto direto
 	- Quantidade de 9 no limpa (cancha 2 e 4);
 	- Quantidade de 8 real (que fica o pino do meio em pé) no limpa (cancha 2 e 4);
-	- Quantidade de 9 geral;
 	- Quantidade de 8 geral;
 	- Quantidade de 7 geral;
-	- Assim por diante;
+	- Assim por diante tudo na limpa;
 - Condição para pontos individuais;
 	- Somente finais -> Regra: total_de_pinos / 2 (semi e final);
 	- Campeonato completo -> Regra: total_de_pinos / numero_de_jogos;
 		- Ter um detalhe para essa regra -> número minimo de partidas para essa condição;
+	- mais pinos derrubados;
 - Formato campeonato -> ter as opções abaixo
 	- Fase de grupos (checkbox)
 	- Mata-mata (chaveamento) (checkbox)
@@ -66,8 +67,8 @@ Claro sem a parte burocratica, pois isso não é sabido ao certo como funciona.
 ### Se tiver fase de grupos selecionado
 Com base no número de times do campeonato sugerir a quantidade de grupos, vamos por enquanto com base na regra abaixo:
 
-	< 6 = 1 grupo;
-	> 6 <= 8 = 1 ou 2 grupos;
+	< 7 = 1 grupo;
+	> 7 <= 8 = 1 ou 2 grupos;
 	> 8 <= 12 = 2 ou 3 grupos;
 	> 12 <= 16 = 2, 3 ou 4 grupos;
 	> 16 <= 20 = 3, 4 ou 5 grupos;
@@ -76,7 +77,7 @@ Informar quantos times passam por grupo, com base no número de grupos, vamos po
 
 	1 grupo = 4;
 	- Esse talvez seja o único default, depois tem que pensar
-	-  Número par de grupos beleza, sabendo que o mata mata precisa de uma razão potencial sobre, entre a quantidade de times, tipo 2, 4, 8, 16 (2, 2², 2³...);
+	- Número par de grupos beleza, sabendo que o mata mata precisa de uma razão potencial sobre, entre a quantidade de times, tipo 2, 4, 8, 16 (2, 2², 2³...);
 	- Quando o número de grupos for impar sugerir o melhor segundo conforme precisar de times para suprir a necessidade da tabela;
 	- Se precisar sugerir o melhor terceiro, e assim por diante;
 		

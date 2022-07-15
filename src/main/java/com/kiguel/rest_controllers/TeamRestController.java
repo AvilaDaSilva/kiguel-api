@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/team")
+@RequestMapping("/api/team")
 public class TeamRestController {
 
     @Autowired

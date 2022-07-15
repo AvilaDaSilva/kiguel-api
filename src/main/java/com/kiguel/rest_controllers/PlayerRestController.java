@@ -19,7 +19,7 @@ import com.kiguel.controllers.PlayerController;
 import com.kiguel.entities.PlayerEntity;
 
 @RestController
-@RequestMapping("/players")
+@RequestMapping("/api/players")
 public class PlayerRestController {
 	
 	@Autowired
