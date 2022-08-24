@@ -1,39 +1,52 @@
 package com.kiguel.controllers;
 
 import com.kiguel.entities.TeamEntity;
-import com.kiguel.repositories.TeamRepository;
+import com.kiguel.services.TeamService;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
+@RequestMapping("/api/team")
 public class TeamController {
 
     @Autowired
-    private TeamRepository teamRepository;
+    private TeamService teamService;
 
-    public TeamEntity save(TeamEntity teamEntity) {
-        return teamRepository.save(teamEntity);
+    @GetMapping
+    public List<TeamEntity> getAll() {
+        return teamService.findAll();
     }
 
-    public TeamEntity update(TeamEntity teamEntity) {
-        return teamRepository.save(teamEntity);
+    @GetMapping("/{id}")
+    public TeamEntity getById(@PathVariable Long id) {
+        return teamService.findById(id);
     }
 
-    public TeamEntity findById(Long id) {
-        return teamRepository.findById(id).orElse(null);
+    @GetMapping("/name/{name}")
+    public List<TeamEntity> getByName(@PathVariable String name) {
+        return teamService.findByName(name);
     }
 
-    public List<TeamEntity> findByName(String name) {
-        return teamRepository.findByName(name);
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public TeamEntity save(@RequestBody TeamEntity teamEntity) {
+        return teamService.save(teamEntity);
     }
 
-    public List<TeamEntity> findAll() {
-        return teamRepository.findAll();
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public TeamEntity update(@PathVariable Long id, @RequestBody TeamEntity team) {
+        team.setId(id);
+        return teamService.save(team);
     }
 
-    public void deleteById(Long id) {
-        teamRepository.deleteById(id);
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteTeam(@PathVariable Long id) {
+        teamService.deleteById(id);
     }
 }
